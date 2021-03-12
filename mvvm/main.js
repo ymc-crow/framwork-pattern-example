@@ -26,17 +26,17 @@ class ViewModel{
 		this.bind = function(viewElement, modelElement){
 		    viewElement.style.color = model.getCurrentColor(modelElement);
 			model.subscribe(function(attrNm, newValue){
-			var elem = document.getElementById(attrNm);
-			if(newValue == "red"){
-				elem.style.color = "blue"
-			}
-			else if(newValue == "green"){
-				elem.style.color = "red"
-			}
-			else if(newValue == "blue"){
-				elem.style.color = "green"
-			}			
-		});
+                var elem = document.getElementById(attrNm);
+                if(newValue == "red"){
+                    elem.style.color = "blue"
+                }
+                else if(newValue == "green"){
+                    elem.style.color = "red"
+                }
+                else if(newValue == "blue"){
+                    elem.style.color = "green"
+                }			
+            });
 			viewElement.addEventListener('input', function(){
 				model.setColor("color", viewElement.value);
 		});
